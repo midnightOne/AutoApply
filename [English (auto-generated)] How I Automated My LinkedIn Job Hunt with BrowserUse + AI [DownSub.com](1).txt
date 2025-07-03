@@ -1,0 +1,332 @@
+This is the subtitle file for the video bout browser use
+
+Are you tired of manually applying jobs,
+filling out the same forms, uploading
+the same resume, and sending the same
+messages to recruiters over and over
+again? What if I told you with just
+single prompts, you could get AI to open
+the browser for you, search for jobs,
+fill job applications, and even message
+the right recruiters for you? Well, in
+this video, I'm going to show you how to
+do exactly that using a tool called
+Browser Use, which is an open-source
+project that's turning AI agents into
+your personal browser assistant for job
+huntings and more. This tool has already
+earned over 50,000 stars on GitHub and
+even popular AI products like Minus are
+using it as a core components for their
+products. So with that being said, if
+you're interested, let's dive into the
+video. All right, so to get started,
+first we're going to navigate to browser
+use repository. And here, if we were to
+scroll down, you can see that there's a
+couple options we can choose. One is the
+browser use, which we can be able to run
+browser use in the command line, or we
+can be able to use the web UI version,
+which we can be able to control the AI
+agents in the browser. For simplicity,
+we're just going to choose this option
+first. And once we're in the web UI
+version and here are the steps we're
+going to follow to install this. So here
+I just opened a terminal and what I'm
+going to do is I'm going to get clone
+the repository inside of my desktop. So
+I'm just going to do get clone and this
+will clone the repository here and I'm
+just going to cd into the web UI. Now
+we're going to also set up the Python
+environment. So here you can see it is
+using the UV to manage the Python
+environment. So in that case what we're
+going to do is we're going to copy this
+command and be able to run this in the
+terminal. So I'm just going to run this
+command inside of the repository. And
+you can see that it has created the
+virtual environment here. And then if
+you were to scroll down, we also need to
+activate the virtual environment. So
+here I'm using Mac. So I'm just going to
+copy this command. Come back to the
+terminal. And I'm just going to run
+this. And here you can see it has
+activate the virtual environment. And
+then we're just going to come back and
+try to install all the dependencies. So
+here I'm just going to run install
+Python packages. And here I'm just going
+to run this command to install all the
+packages required in the
+requirements.tst.
+tst. Okay. So after we have everything
+is installed. So then what we need to do
+is install playrs into our browsers. So
+you can either install the playrs in a
+specific browser for example chromium or
+it can be able to install playrs to all
+browsers. So here I'm just going to
+choose to install in all browsers. I'm
+just going to copy this command and come
+back here. Install playrs install. Okay.
+So once everything has been installed
+then the next step is going to be
+configuring our environment. So we're
+going to create a copy of the example
+environment file. So what we need to do
+is I'm going to open the Visual Studio
+Code. So here you can see I have opened
+the repository in Visual Studio Code.
+And here you can see there is
+av.example file. And based on the
+instruction, we're just going to rename
+this to the MV file instead. So I'm just
+going to change this to thev file.
+And based on this EMv file, you can see
+that it's mostly for putting the API
+keys for the AI models. And for the AI
+API key providers, we're just going to
+use the open AI routers here because for
+open router, we can be able to choose
+any models we like. For example,
+DeepSeek, QWEN, Misro, OpenAI, and such.
+But because running models here can be
+expensive, so we're going to use the
+free version for Deepseek V3. So here
+I'm just going to choose Deepseek. And
+there is a V3 uh 0324 free. So we're
+just going to choose this version. And
+then once we're on this page, we're
+going to click on API. And if we were to
+scroll down, we're going to copy this
+base URL here and navigate to the
+repository and replace this with the
+open AI endpoint. Then we're also going
+to get the API key. So to do so, we're
+going to come back and we're going to
+click on the get or create API key. So
+once we going to click on this and
+create a new key, we're just going to
+name this to browser use. And I'm just
+going to click on create. Once it's
+created, we're going to copy this new
+key and then come back to the repository
+and paste the key here. And then what we
+can do is we can be able to start our
+project. So if we were to scroll down
+and there is a section for the usage on
+local setups. So we're just going to run
+this command here to run the web UI. So
+we're going to copy this and then we're
+just going to paste this command into
+the terminal and this is what we get. So
+we get a local URL that we can copy and
+go to the browser and navigate to this
+URL. And then once we're on this page,
+you can see that this is what it
+displays. We have the browser use for
+the web UI which controls our browser
+with AI assistant. But we haven't
+finished setting up yet. So we're just
+going to click on LM settings. And here
+what needs to be changed is the model
+name. So what we're going to do is we're
+going to come back to this one right
+here because we're using the DeepC V3
+for the free version. So we're going to
+copy this name and we're just going to
+paste it here for the model name. Okay.
+So once that's done, we're going to
+click on run agent. And then here we
+also have the button to run the agent.
+And then here we also have the task
+description to describe what we want the
+agent to do. And here we have a default
+task which is to go to google.com and
+type in uh openAI and click on search.
+Then give us the first URL. So we're
+just going to click on run agents to
+test. And right away it basically opens
+a new browser on our computer and
+basically navigate to google.com and
+types in open AI. And you can see that
+we have bunch of squares highlighted on
+the page. And this will basically feed
+into the AI to make decisions and be
+able to extract relevant information.
+And once we have the search results,
+it's going to fetch the first URL and be
+able to return back to the output. And
+back to the console, this is what we
+have. So you can see that we have our
+results displayed for the first URL in
+the search results, which is this one
+right here. Now back to the terminal, we
+can be able to see the loggings for each
+steps that it took for the automation.
+So for each steps, it gives us the exact
+details on what information is being
+extracted and what information is being
+fed into the AI to make decision. If we
+were to look at the code inside of the
+browser use repository
+/dom/builddomtryree.js, we do see that
+there's a function called buildom tree
+function and this takes a DOM node and
+basically converts it into a node data
+object for the given node and its
+descendants. So basically it use
+recursions. So you can see this function
+basically calls it itself to do a deer
+search into its DOM tree to process the
+children nodes. Uh there's also a
+highlight element function which is the
+highlights that we see on the browser.
+So you can see that it takes the element
+for the DOM. And basically if the
+container has not been created, it's
+going to create the container by
+creating a div and be able to style it.
+And once we style it, we're also going
+to choose a color to highlight it on the
+browser that we see. And once it's
+highlighted, we're going to update its
+position. And that's why we see the
+highlights for each elements and buttons
+that we see on the page. All right. So
+now, what if you want to use your own
+existing browser instance? Then in this
+case, you can be able to select the this
+option to use your own browser instance.
+And then back to the repository, we also
+need to change the Chrome settings in
+terms of the Chrome path. This is going
+to tell browser use where our Google
+Chrome is located in our local machine
+so that we can use our own browser for
+the automation. And once we done this,
+we also need to restart our terminal if
+you want to run what we just talked
+about today again after you restart your
+computer. You can also CD into the right
+package. Make sure you activate the
+environment and then just run the same
+command that we start the browser use.
+And this will basically start our
+browser use on this port. We also need
+to restart our browser use. Make sure we
+choose the use own browser to be able to
+run the browser use on our own browser
+instance. And here you can see it has
+opened my own Chrome browser to do the
+automations. All right. So now let's get
+to the real stuff. So how do we be able
+to automate applying for jobs? So here
+you can see I'm logged into my LinkedIn
+and here we display a list of jobs. So
+what I usually do is I basically screen
+record myself to apply for one of the
+job and be able to take this footage and
+upload to GBT and be able to generate a
+prompt that I can take this prompt and
+put it into the browser use AI
+automation agents to perform the task.
+So let me try to demonstrate this to you
+right now. So here you can see that's
+what I did. I start to screen record
+what I just talked about and be able to
+upload my resume. So I basically tell
+GBT to write me a prompt or instructions
+for browser use to apply for jobs. And I
+also have attached my resume. And based
+on the this video footage right here, um
+I want the GBT to write a prompt and
+instruction on what to do for browser
+use. And this is going to be the starter
+link that is going to start to see all
+the job list and start applying. I'm
+just going to let GBT to generate the
+prompt. So you can see below here we
+have the prompt that's generated by the
+GBT. It provides the starter link, the
+goal on basic rules on what jobs we want
+to apply and what jobs we don't want to
+apply as well as decision-makings on
+what are the jobs we want to apply for.
+And then there's also cover letters. So
+we're just going to copy this. Okay,
+perfect. So then I'm just going to paste
+this to the browser use. And I'm just
+going to click on run agent. And here
+you can see the AI automation start to
+do the work. And you can see that it
+start to automatically fill the
+information, be able to answer questions
+about job application. And but
+eventually you can see that it succeeded
+and apply the application. And now let's
+see how it be able to apply for the nest
+application. And you can see that we
+select another job because it shows that
+this is a remote, not a hybrid. And here
+you can see it just continues to apply
+for the job. And here you can see that
+it also works for jobs that are external
+outside of LinkedIn. So you can see that
+here is basically going to fill the
+informations based on what we provided
+on the resume. Now you can also use this
+to message recruiters or sourcers in
+your current LinkedIn networks. So for
+example for my current networks in
+LinkedIn you can see that we have a list
+of connections and for each of the
+connections I want browser use to look
+at their titles, their company and the
+jobs that they're hiring for. And based
+on those informations and we also want
+to pass the candidate information about
+the resume about what types of jobs
+they're looking for and to see if
+there's a a match and if there is a
+match then we're going to send a message
+directly to this recruiter uh or sourcer
+to basically reach out to schedule the
+interview. Right? So that's exactly what
+we're going to do. I use the same method
+to record the process as well as the
+resume attached and the prompt uh that
+we're going to ask GPT to generate the
+prompt that we can use for the browser
+use. So let's try to generate this and
+you can see that GBT is reading the
+documentations or files and be able to
+generate the prompt. All right. So after
+we get a prompt from GBT uh we're just
+going to click on start agent and you
+can see that it start to do the work and
+we first navigate to the LinkedIn page
+that we specified and here you can see
+we have all the elements highlighted and
+then you can see that I choose to click
+on the message and send the message
+directly on the chat window here. All
+right, so that's it for this video and
+you can see that with just a simple
+prompts and the right tool, we can be
+able to automate our LinkedIn outreach,
+automatically apply for job applications
+in a way that can save us time using AI.
+And you can see that browser use can be
+able to automate a lot of those boring
+tasks that we do on the browser by just
+one single command. So if you found this
+video helpful, please give a like, drop
+a comment if you have any questions, and
+don't forget to check out these videos
+for more automations in job search.
